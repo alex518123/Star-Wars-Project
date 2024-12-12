@@ -59,4 +59,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Desenvolvido por: Rodrigo Serrasqueiro [Dê uma olhada no meu portfólio!](https://rodrigoserrasqueiro.github.io/Portfolio)
+Desenvolvido por: Alexander Resende [Dê uma olhada no meu portfólio!]()
