@@ -1,0 +1,202 @@
+
+<!-- Declara o tipo de documento como HTML5 -->
+<!-- Idioma do documento como português do Brasil -->
+<!-- meta do initial-scale Torna a página responsiva, ajustando o layout com base no dispositivo -->
+<!-- <title>: Define o título exibido na aba do navegador. -->
+<!-- <link rel="stylesheet">: Importa o arquivo CSS externo para estilizar a página. -->
+<!-- <link rel="icon">: Define o ícone da aba do navegador. -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars Characters | By Alexander Resende</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./assets/millennium-falcon.png">
+</head>
+
+<body>
+  <header>
+    <a href="./index.html">
+      <div class="logo">
+        <img class="logo-img" alt="logo" src="./assets/star-wars-logo.png"/>
+        <span class="logo-text">Characters</span>
+      </div>
+    </a>
+
+    <!-- Essa div está dentro de uma âncora para permitir que ela seja clicavel, direciona para o index com href pois é o padrão  -->
+
+    <div class="social-media">
+
+      <a href="https://www.instagram.com/rodrigoserrasqueiro/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://www.facebook.com/rodrigoserrasqueiro" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="https://github.com/RodrigoSerrasqueiro" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/rodrigoserrasqueiro/" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+
+    </div>
+
+    <!-- Aqui precisa criar uma âncora para cada item/ícone do menu, coloque o href para as suas redes sociais 
+    O target="_blank" serve para abrir o link em outra aba -->
+    <!-- Cada link para redes sociais é representado por um ícone da biblioteca Font Awesome. -->
+
+    <!-- Primeira div tem o logo de star wars com o span "characters" e a Segunda div tem as redes sociais -->
+
+  </header>
+
+  <div class="main-container">
+
+    <h2>Ha muito tempo, numa galaxia muito, muito distante...</h2>
+
+    <div class="main-content" id="main-content"></div>
+
+    <div class="modal" id="modal" onclick="hideModal()">
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="back-button" disabled>Anterior</button>
+      <button id="next-button" disabled>Próxima</button>
+    </div>
+
+  </div>
+
+  <!-- <div class="main-container"> Um contêiner que organiza o conteúdo principal da página.  
+  O "bloco pai" que agrupa o título, os personagens listados, o modal e os botões de paginação -->
+
+  <!-- h2 é título -->
+
+  <!-- Container Principal: -->
+
+  <!-- <div class="main-content" id="main-content">: Um contêiner vazio onde os personagens serão inseridos dinamicamente com JavaScript. -->
+  <!-- A id="main-content" permite que o JavaScript localize e manipule este elemento -->
+
+  <!-- <div class="modal">: Um contêiner para o modal que exibe informações detalhadas do personagem com JS qdo selecionado o personagem. -->
+
+  <!-- onclick="hideModal()": Fecha o modal ao clicar fora do conteúdo. -->
+
+  <!-- <div class="modal-content" id="modal-content">: Um subelemento onde os detalhes específicos do personagem (nome, altura, peso, etc.) 
+  serão inseridos. É o modal de fato -->
+
+  <!-- O modal deve ser exibido ao clicar em um personagem. O JS insere as informações no modal-content e controla a visibilidade do modal-->
+
+  <!-- Dois botões de paginação (anterior e próxima) inicialmente desabilitados (disabled) para navegação entre páginas. -->
+  <!-- Inicialmente, ambos os botões estão desabilitados (disabled) até que a funcionalidade seja habilitada pelo JavaScript. -->
+
+
+<!-- Como tudo funciona junto:
+1) Listagem Dinâmica:
+A área main-content será preenchida com os personagens em formato de lista ou cards.
+A navegação entre páginas será controlada pelos botões "Anterior" e "Próxima".
+
+2) Modal:
+Ao clicar em um personagem listado, um evento no JavaScript exibirá o modal, preenchendo-o com informações detalhadas do personagem.
+
+3) Paginação:
+Quando o usuário interage com os botões de navegação, o JavaScript faz uma nova requisição à API para carregar a próxima ou a página anterior.
+A função disabled nos botões impede cliques quando não há mais páginas disponíveis (primeira ou última página). -->
+
+  <footer>
+    <p class="footer-logo">Star Wars Characters</p>
+    <p class="copyrigth">Desenvolvido por &copy; Alexander Resende</p>
+  </footer>
+
+  <!-- Contém um nome estilizado e a mensagem de direitos autorais. -->
+
+  
+  <!-- Para permitir importar os ícones do Font Awesome para dentro do projeto -->
+  <!-- Importa o arquivo JavaScript para adicionar funcionalidade dinâmica. -->
+  <script src="https://kit.fontawesome.com/a747b09475.js" crossorigin="anonymous"></script>   
+  <script src="./script.js"></script>
+</body>
+</html>
+
+<!-- Font Awesome é uma biblioteca popular de ícones vetoriais e logotipos. 
+Ela fornece milhares de ícones que podem ser personalizados em tamanho, cor e estilo, e são fáceis de integrar em projetos HTML. 
+Eles são utilizados para melhorar a aparência visual de botões, links, menus ou qualquer outro elemento que precise de um ícone. -->
+
+<!-- crossorigin="anonymous":
+Este atributo é usado para lidar com pedidos cross-origin (solicitações feitas a servidores de um domínio diferente do atual).
+No contexto do Font Awesome, ele garante que o navegador não inclua cookies ou credenciais no pedido, respeitando práticas de segurança.
+Também evita problemas de erros relacionados ao CORS (Cross-Origin Resource Sharing), permitindo que o navegador carregue o recurso 
+corretamente. -->
+
+<!-- Quando o navegador carrega o arquivo referenciado pela URL, ele executa um script que:
+Verifica qual versão do Font Awesome deve ser carregada (definida no kit configurado pelo proprietário do projeto).
+Garante que os ícones possam ser usados no HTML através de classes como <i class="fas fa-star"></i>.
+Carrega os estilos e ícones da biblioteca diretamente da CDN, sem necessidade de download manual de arquivos. -->
+
+<!-- A parte a747b09475 é uma chave única associada ao kit Font Awesome que pertence ao desenvolvedor ou projeto:
+Ela identifica o kit configurado na conta do Font Awesome.
+Através dessa chave, é possível personalizar o kit para incluir apenas os ícones necessários, otimizando o carregamento e desempenho.
+Esse kit pode ser gerenciado e modificado diretamente no site do Font Awesome. -->
+
+<!-- Após incluir o script, você pode usar os ícones no HTML com classes como estas:
+html
+Copiar código
+<i class="fas fa-star"></i> <!-- Ícone de estrela preenchida -->
+<!-- <i class="fab fa-github"></i> Ícone do GitHub -->
+<!-- <i class="far fa-heart"></i> Ícone de coração contornado --> 
+
+<!-- fas: Define que o ícone pertence ao conjunto "Solid" (ícones preenchidos).
+fab: Refere-se ao conjunto "Brand" (ícones de marcas, como GitHub, Twitter, etc.).
+far: Refere-se ao conjunto "Regular" (ícones contornados). -->
+
+<!-- Exemplo Prático (Fluxo Esperado)
+O JavaScript faz uma requisição inicial à API Swapi e preenche o main-content com informações de personagens.
+O usuário clica em um personagem; o modal aparece com informações detalhadas desse personagem.
+O usuário navega para a próxima página usando o botão "Próxima", e o main-content é atualizado com novos personagens.
+O botão "Anterior" fica habilitado para permitir voltar à página anterior. -->
+
+<!-- Resumo:
+Carrega a biblioteca Font Awesome para permitir o uso de ícones vetoriais no projeto.
+Usa um Kit personalizado associado à chave única a747b09475.
+Garante segurança e compatibilidade ao especificar o atributo crossorigin="anonymous".
+Facilita o uso de ícones diretamente no HTML com classes predefinidas. -->
+
+
+<!-- Se eu fosse criar manualmente os cards seria assim em vez de pegar da api:
+
+<div class="main-container">
+
+  <h2>Ha muito tempo, numa galaxia muito, muito distante...</h2>
+
+  <div class="main-content" id="main-content">
+
+    <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/1.jpg');">
+      <div class="character-name-bg">
+        <span class="character-name">Luke Skywalker</span> 
+      </div>
+    </div>
+
+    <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/2.jpg');">
+      <div class="character-name-bg">
+        <span class="character-name">Princesa Leia</span> 
+      </div>
+    </div>
+
+    <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/3.jpg');">
+      <div class="character-name-bg">
+        <span class="character-name">Darth Vader</span> 
+      </div>
+    </div>
+
+  <div class="buttons">
+    <button id="back-button" disabled>Anterior</button>
+    <button id="next-button" disabled>Próxima</button>
+  </div>
+
+</div> -->
