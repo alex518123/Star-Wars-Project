@@ -1,54 +1,28 @@
 @import url('https://fonts.cdnfonts.com/css/star-wars');
 
 
-/*: Afeta todos os elementos da página.
-margin: 0; padding: 0;: Remove margens e preenchimentos padrão dos elementos para garantir uniformidade no design.
-box-sizing: border-box;: Inclui o padding e as bordas no tamanho total dos elementos, evitando mudanças de tamanho indesejadas 
-ao adicionar preenchimento ou borda */
-/* list-style: none;: Remove os estilos padrão de listas (como marcadores ou números).
-color: #fff;: Define a cor do texto como branca para todos os elementos, com a possibilidade de sobrepor isso em estilos específicos. */
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  /*Para os elementos não mudarem de tamanho ao colocarmos padding neles */
+  box-sizing: border-box;  
   list-style: none;
   color: #fff;
 }
-
-/* Define uma imagem de fundo representando o universo, reforçando o tema de Star Wars
-Faz com que a imagem de fundo cubra todo o elemento body, sem deformações */
 
 body {
   background-image: url('./assets/universo-bg.jpg');
   background-size: cover;
 }
-/* Cover para ocupar todo o espaço do body */
 
-/*Define o cursor de sabre de luz verde para todos os elementos */
 * {
   cursor: url('https://cur.cursors-4u.net/others/oth-1/oth28.cur'), auto !important;
 }   
 
-/* Cursor roxo do Mace Windu para todos os elementos */
-/* * {
-  cursor: url('https://cur.cursors-4u.net/movie/mov-1/mov29.ani'), 
-          url('https://cur.cursors-4u.net/movie/mov-1/mov29.png'), 
-          auto !important;
-} */
-
-
-/* Remove o sublinhado padrão de links HTML, deixando-os mais limpos. */
-/* Estilizando pela tag a âncora */
 
 a {
   text-decoration: none;
 }
 
-/* Define a altura do cabeçalho, Torna o cabeçalho um contêiner flexível para organizar elementos internos.
-Alinha os elementos filhos verticalmente ao centro dentro do cabeçalho.
-Distribui o espaçamento livre uniformemente ao redor dos elementos filhos no cabeçalho, criando um espaçamento igual entre eles 
-e nas extremidades. */
 
 header {
   height: 70px;
@@ -57,11 +31,6 @@ header {
   justify-content: space-around;
 }
 
-/* Agora vamos estilizar as classes: */
-
-/* Define o tamanho da área do logotipo.
-Organiza os elementos internos (imagem e texto) horizontalmente com display flex.
-Centraliza os itens horizontal e verticalmente, respectivamente */
 
 .logo {
   width: 250px;
@@ -71,26 +40,15 @@ Centraliza os itens horizontal e verticalmente, respectivamente */
   align-items: center;
 }
 
-/* A largura da imagem é ajustada a 40% da largura do contêiner pai, tornando-a responsiva
-Mantém a proporção original da imagem com height auto, ajustando a altura automaticamente com base na largura definida. */
-
 .logo-img {
   width: 40%;
   height: auto;
 }
 
-/* Define uma fonte personalizada (o arquivo da fonte foi importado).
-Define o tamanho do texto baseado no tamanho da fonte raiz (1rem é geralmente igual a 16px). */
-
 .logo-text {
   font-family: 'Star Wars';
   font-size: 1rem;
 }
-/* 1 rem é 16 px, tamanho padrão do navegador */
-
-/* Define a largura da área de redes sociais.
-Coloca os ícones em linha horizontal.
-Garante espaçamento uniforme entre os ícones com space-between */
 
 .social-media {
   width: 130px;
@@ -98,28 +56,13 @@ Garante espaçamento uniforme entre os ícones com space-between */
   justify-content: space-between;
 }
 
-/* Estilizando os ícones: */
-
-/* Aumenta o tamanho dos ícones para melhorar a visibilidade. */
-
 i {
   font-size: 1.2rem;
 }
 
-/* Aplica um efeito visual ao passar o mouse sobre os ícones.
-Muda a cor do ícone para dourado, destacando o item e melhorando a experiência do usuário */
-
 i:hover {
   color: gold;
 }
-
-/* Contêiner principal
-Transforma o contêiner principal em um flexbox, para organizar seus filhos (título, lista de cartões, etc.)
-Centraliza os elementos filhos horizontalmente.
-Organiza os elementos em coluna (verticalmente).
-Faz o contêiner ocupar toda a largura disponível.
-Adiciona um espaçamento vertical de 20px acima e abaixo do conteúdo.
-https://starwars-visualguide.com/assets/img/characters/1.jpg para pegar as fotos dos personagens, só mudar o id (1, 2, 3...) */
 
 .main-container {
   display: flex;
@@ -129,10 +72,6 @@ https://starwars-visualguide.com/assets/img/characters/1.jpg para pegar as fotos
   padding: 20px 0;
 }
 
-/* Usa uma fonte personalizada, com a fonte genérica sans-serif como fallback
-Adiciona um espaço de 20px abaixo do título, separando-o do restante do conteúdo.
-Define a cor do texto como dourada, criando um destaque temático.
-Define a largura da fonte, criando uma aparência elegante e refinada */
 
 h2 {
   font-family: 'Star Wars', sans-serif;
@@ -141,23 +80,6 @@ h2 {
   font-weight: 300;
   animation: scroll-title 3s ease-out;
 }
-
-/* Essa animation Aplica uma animação chamada scroll-title ao título, com duração de 3 segundos e um efeito de desaceleração no final 
-(ease-out). Isso faz com que a animação inicie rapidamente e depois desacelere à medida que ela termina - toque temático star wars */
-
-/* Define a animação chamada scroll-title. Dentro dessa regra, você define os estados da animação em termos de porcentagens (de 0% a 100%). 
-A animação descreve como o título vai se mover e como a opacidade vai mudar durante o tempo da animação. */
-
-/* transform: translateY(50px);: No início da animação (0%), o título começa 50 pixels abaixo de sua posição original. 
-Isso cria o efeito de "deslizar para cima". */
-
-/* opacity: 0;: No início, o título é completamente transparente, o que significa que ele não é visível até o momento em que a 
-animação começar. */
-
-/* 100% { transform: translateY(0); opacity: 1; }:
-transform: translateY(0);: No final da animação (100%), o título está em sua posição original, ou seja, ele "desliza" de volta para o 
-seu lugar normal (de baixo para cima).
-opacity: 1;: No final da animação, o título fica completamente opaco, ou seja, ele se torna totalmente visível. */
 
 @keyframes scroll-title {
   0% {
@@ -170,15 +92,6 @@ opacity: 1;: No final da animação, o título fica completamente opaco, ou seja
   }
 }
 
-/* Contêiner de cartões */
-/* Faz o contêiner de conteúdo ocupar toda a largura disponível.
-Usa flexbox para organizar os cartões.
-Centraliza os cartões horizontalmente no contêiner.
-flex-wrap: wrap;: Permite que os cartões "quebrem" para a próxima linha quando não houver mais espaço horizontal.
-Define um espaçamento horizontal de 20px entre os cartões.
-Define um espaçamento vertical de 10px entre as linhas de cartões.
-Adiciona um espaçamento de 20px nas laterais do contêiner, garantindo que o conteúdo não encoste nas bordas. */
-
 .main-content {
   width: 100%;
   display: flex;
@@ -188,27 +101,6 @@ Adiciona um espaçamento de 20px nas laterais do contêiner, garantindo que o co
   row-gap: 10px;
   padding: 0 20px;
 }
-
-
-/* Estilizar cada card */
-/*Define uma borda de 2 pixels de largura, com a cor dourada (gold). Essa borda dá um destaque ao cartão e é alinhada com o tema Star Wars
-Define o tamanho fixo de cada cartão.
-Centraliza a imagem de fundo no cartão com background-position: 50% 50%.
-Faz com que a imagem de fundo cubra todo o cartão, sem distorções
-display: flex; align-items: end;: Torna o cartão um flexbox e posiciona o conteúdo (nome do personagem) na parte inferior
-Adiciona bordas arredondadas ao cartão com border-radius
-cursor: pointer;: Define o cursor como ponteiro, indicando que o usuário pode interagir com o cartão
-transition: 0.5s;: Define uma transição suave de 0,5 segundos para a animação de escala ao passar o mouse sobre o cartão
-padding: 5px;: Adiciona um espaçamento interno de 5px ao cartão */
-
-/* box-shadow: 0 0 10px rgba(255, 223, 0, 0.5);: Cria uma sombra em torno do cartão. A sombra é suave e de cor dourada (rgba(255, 223, 0, 0.5)), 
-com um desfoque de 10px, fazendo o cartão parecer estar flutuando levemente. 
-O valor rgba(255, 223, 0, 0.5) usa o modelo de cores RGBA (vermelho, verde, azul e opacidade), com uma opacidade de 50% (0.5).
-
-transition: transform 0.5s, box-shadow 0.5s;: Aplica uma transição suave de 0.5 segundos para duas propriedades:
-transform (que afeta a escala do cartão, por exemplo).
-box-shadow (que afeta a sombra do cartão).
-Isso garante que quando essas propriedades mudarem (por exemplo, ao passar o mouse sobre o cartão), elas ocorram de forma gradual e fluida. */
 
 .cards {
   border: 2px solid gold;
@@ -226,30 +118,11 @@ Isso garante que quando essas propriedades mudarem (por exemplo, ao passar o mou
   padding: 5px;
 }
 
-/* Amplia o cartão em 2% ao passar o mouse, criando um efeito de destaque */
-/* Quando o mouse passa sobre o cartão, a sombra do cartão se torna mais forte e visível. 
-A cor da sombra permanece dourada, mas a opacidade é agora 100% (1), o que torna a sombra mais pronunciada.
-A sombra também aumenta de tamanho, passando de 10px para 20px de desfoque, dando a impressão de que o cartão 
-está realmente "flutuando" mais alto. */
 
 .cards:hover {
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(255, 223, 0, 1);
 }
-
-/* Resumindo: O cartão tem uma borda dourada e uma sombra sutil, com transições suaves definidas para a escala e a sombra.
-Ao passar o mouse: O cartão é ampliado em 2% (aumentando seu tamanho), e a sombra se torna mais intensa, destacando ainda mais o cartão. 
-Esse efeito de destaque proporciona uma interação visual clara com o usuário, indicando que o cartão pode ser clicado. */
-
-/* Contêiner de informações do personagem */
-
-/* Fundo do Nome do Personagem
-
-Define o tamanho do contêiner de informações do personagem.
-Faz o fundo do nome ocupar toda a largura do cartão, com 30px de altura.
-Aplica um fundo preto semitransparente (o 0.5 é opacidade, transparência)
-display: flex; align-items: center; justify-content: center;: Centraliza o texto do nome dentro do fundo.
-Adiciona bordas arredondadas ao fundo do nome. */
 
 .character-name-bg {
   width: 100%;
@@ -261,25 +134,11 @@ Adiciona bordas arredondadas ao fundo do nome. */
   border-radius: 10px;
 }
 
-/* Define a fonte personalizada, com a fonte genérica sans-serif como fallback */
 .character-name {
   font-family: 'Star Wars', sans-serif;
   color: gold;
   font-size: 1rem;
 }
-
-/* Resumo:
-O contêiner organiza o título e os cartões de maneira centralizada.
-Os cartões são estilizados para exibir imagens de fundo e nomes com um design moderno e responsivo.
-O efeito de hover destaca os cartões, incentivando a interação do usuário.
-A paleta de cores e a fonte reforçam o tema Star Wars. */
-
-/* Contêiner de Botões
-Define que o contêiner de botões ocupará 60% da largura do elemento pai.
-Torna o contêiner um flexbox para organizar os botões.
-Centraliza os botões verticalmente no contêiner.
-Distribui os botões uniformemente, com espaço entre eles usando space-between
-Adiciona um espaçamento de 20px acima do contêiner, separando-o do conteúdo anterior. */
 
 .buttons {
   width: 60%;
@@ -288,18 +147,6 @@ Adiciona um espaçamento de 20px acima do contêiner, separando-o do conteúdo a
   justify-content: space-between;
   margin-top: 20px;
 }
-
-/* Estilização Geral dos Botões (button)
-Define o tamanho fixo de cada botão.
-Estabelece a cor de fundo dourada.
-Define a cor do texto como preto, criando contraste com o fundo 
-Torna o texto do botão mais grosso (negrito).
-Aplica bordas arredondadas ao botão.
-Define uma transição suave de 0,3 segundos para a animação de cor ao passar o mouse sobre o botão
-Define um cursor de ponteiro, indicando que o usuário pode interagir com o botão
-Adiciona uma borda preta fina ao botão.
-Remove o contorno padrão quando o botão é focado usando o outline: none
-Adiciona uma transição suave para os efeitos de hover. */
 
 button {
   width: 70px;
@@ -314,26 +161,15 @@ button {
   transition: 0.3s;
 }
 
-/* Altera a cor de fundo para preto ao passar o mouse.
-Muda a cor do texto para dourada, invertendo o contraste. */
 
 button:hover {
   background-color: #000;
   color: gold;
 }
 
-/* visibility: hidden;: Oculta o botão anterior sem removê-lo do fluxo do layout. Ele ainda ocupa espaço. Pelo id*/
-
 #back-button {
   visibility: hidden;
 }
-
-/* Faz o rodapé ocupar toda a largura disponível. Pela tag
-Organiza os elementos do rodapé com flexbox.
-Organiza os elementos do rodapé em uma coluna (verticalmente).
-Centraliza os elementos horizontalmente.
-Adiciona um espaçamento vertical de 10px entre os elementos.
-Adiciona margens externas: 40px acima, 20px abaixo e 0px nas laterais. */
 
 footer {
   width: 100%;
@@ -344,28 +180,15 @@ footer {
   margin: 40px 0 20px 0;
 }
 
-/* Usa a fonte temática "Star Wars". Pela classe
-Define o tamanho do texto como 1.5 vezes o tamanho base (aproximadamente 24px).
-Define um peso médio para o texto. */
-
 .footer-logo {
   font-family: 'Star Wars', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-/* Usa um peso médio para destacar o texto de direitos autorais. */
-
 .copyrigth {
   font-weight: 500;
 }
-
-/* Oculta o modal até que ele seja ativado.
-Torna o modal um flexbox para centralizar o conteúdo.
-align-items: center; justify-content: center;: Centraliza o conteúdo do modal horizontal e verticalmente, respectivamente ao clicar no personagem.
-Faz o modal ocupar toda a largura e altura da janela de visualização com 100 vh
-Adiciona um fundo preto semitransparente para o modal.
-position: fixed; top: 0;:Posiciona o modal fixamente na tela, começando do topo. Se eu rolar para baixo, o modal permanece fixo */
 
 .modal {
   visibility: hidden;
@@ -379,13 +202,6 @@ position: fixed; top: 0;:Posiciona o modal fixamente na tela, começando do topo
   top: 0;
 }
 
-/* Define o tamanho da modal proporcional à largura e altura da janela.
-Aplica um fundo escuro ao conteúdo da modal.
-Arredonda os cantos do conteúdo.
-display: flex; flex-direction: column;: Organiza o conteúdo em uma coluna.
-Define um espaçamento de 15px entre os elementos.
-Adiciona espaçamento interno ao redor do conteúdo. */
-
 .modal-content {
   width: 25vw;
   height: 70vh;
@@ -398,11 +214,6 @@ Adiciona espaçamento interno ao redor do conteúdo. */
   align-items: center;
 }
 
-/* Define o tamanho da imagem como 200px por 200px dentro do modal.
-Torna a imagem circular.
-Posiciona o fundo da imagem.
-Ajusta a imagem para cobrir o espaço disponível sem distorção. */
-
 .character-image {
   width: 200px;
   height: 200px;
@@ -411,11 +222,6 @@ Ajusta a imagem para cobrir o espaço disponível sem distorção. */
   background-size: cover;
 }
 
-/* Usa a fonte temática.
-Define o tamanho do texto.
-Usa um peso de fonte mais leve.
-Define a cor do texto como dourada. */
-
 .character-details {
   font-family: 'Star Wars', sans-serif;
   font-size: 1rem;
@@ -423,40 +229,24 @@ Define a cor do texto como dourada. */
   color: gold;
 }
 
-/* Resumo: Essas regras estilizam os botões para navegação, adicionam funcionalidade à modal para exibir informações 
-detalhadas e personalizam o rodapé e os detalhes de personagem para harmonizar com o tema Star Wars */
-
-/* Media Query para telas de até 1024px
-Aplica os estilos dentro deste bloco para dispositivos com largura máxima de 1024px.
-Adiciona padding interno de 20px ao contêiner principal, garantindo que o conteúdo não fique muito próximo das bordas. */
-
 @media (max-width: 1024px) {
   .main-container {
     padding: 20px;
   }
-  
-  /* Ajusta o tamanho da fonte do elemento <h2> para 1.4rem, adequado para telas menores. */
 
   h2 {
     font-size: 1.4rem;
   }
-
-  /* Reduz a largura da modal para 30% da largura da tela, adequando-a ao espaço disponível. */
 
   .modal-content {
     width: 30vw;
   }
 }
 
-/* Media Query para telas de até 834px, ípicas de tablets e dispositivos intermediários
-Centraliza o texto do <h2> para melhorar a apresentação em telas menores. */
-
 @media (max-width: 834px) {
   h2 {
     text-align: center;
   }
-
-  /* Ajusta a modal para ocupar metade da largura e altura da tela, otimizando o uso do espaço. */
 
   .modal-content {
     width: 50vw;
@@ -464,56 +254,34 @@ Centraliza o texto do <h2> para melhorar a apresentação em telas menores. */
   }
 }
 
-/* Media Query para telas de até 414px, ípicas de smartphones
-Ajusta o tamanho da fonte do <h2> para 1.1rem, adequado para dispositivos menores. */
-/* Reduz o tamanho da fonte do <h2> para 1.1rem, garantindo legibilidade em telas muito pequenas. */
 
 @media (max-width: 414px) {
   h2 {
     font-size: 1.1rem;
   }
 
-  /* Ajusta a largura do contêiner do logotipo para 200px. */
-
   .logo {
     width: 200px;
   }
-  
-  /* Define a largura da imagem do logotipo como 35% do seu contêiner. */
 
   .logo-img {
     width: 35%;
   }
-  
-  /* Diminui o tamanho da fonte do texto associado ao logotipo para melhorar a proporção. */
 
   .logo-text {
     font-size: 0.9rem;
   }
-  
-  /* Reduz o tamanho do contêiner de ícones de redes sociais para se alinhar ao restante do layout. */
 
   .social-media {
     width: 90px;
   }
-
-  /* Faz a modal ocupar quase toda a largura da tela (95%) e ajusta a altura para 70% da tela. */
 
   .modal-content {
     width: 95vw;
     height: 70vh;
   }
 
-  /* Diminui o tamanho da fonte do logotipo do rodapé para se adequar à tela menor. */
-
   .footer-logo {
     font-size: 1.1rem;
   }
 }
-
-/* Resumo da Responsividade
-O código adapta-se a dispositivos de tamanhos variados:
-Telas grandes (1024px): Leve redução de elementos grandes para manter a proporção.
-Tablets (834px): Ajustes mais significativos, como centralização de texto e redimensionamento da modal.
-Smartphones (414px): Elementos são compactados ao máximo, mantendo a legibilidade e funcionalidade.
-Essas regras garantem que a aplicação seja agradável visualmente e funcional em qualquer dispositivo */
